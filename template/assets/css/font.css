@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Prompt";
+    src: url("../font/Prompt/Prompt-Regular.eot");
+    src: url("../font/Prompt/Prompt-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../font/Prompt/Prompt-Regular.woff2") format("woff2"),
+        url("../font/Prompt/Prompt-Regular.woff") format("woff"),
+        url("../font/Prompt/Prompt-Regular.ttf") format("truetype"),
+        url("../font/Prompt/Prompt-Regular.svg#IBMPlexSans-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Prompt";
+    src: url("../font/Prompt/Prompt-medium.eot");
+    src: url("../font/Prompt/Prompt-medium.eot?#iefix") format("embedded-opentype"),
+        url("../font/Prompt/Prompt-medium.woff2") format("woff2"),
+        url("../font/Prompt/Prompt-medium.woff") format("woff"),
+        url("../font/Prompt/Prompt-medium.ttf") format("truetype"),
+        url("../font/Prompt/Prompt-medium.svg#IBMPlexSans-medium") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Prompt";
+    src: url("../font/Prompt/Prompt-semibold.eot");
+    src: url("../font/Prompt/Prompt-semibold.eot?#iefix") format("embedded-opentype"),
+        url("../font/Prompt/Prompt-semibold.woff2") format("woff2"),
+        url("../font/Prompt/Prompt-semibold.woff") format("woff"),
+        url("../font/Prompt/Prompt-semibold.ttf") format("truetype"),
+        url("../font/Prompt/Prompt-semibold.svg#IBMPlexSans-semibold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
