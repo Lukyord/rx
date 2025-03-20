@@ -1072,6 +1072,8 @@ jQuery(document).ready(function ($) {
 
             const slidesPerGroup = $this.data("slidespergroup");
 
+            const autoPlayInterval = $this.data("autoplay-interval");
+
             const swiper = new Swiper($this[0], {
                 resistanceRatio: 0,
                 spaceBetween: 0,
@@ -1099,7 +1101,7 @@ jQuery(document).ready(function ($) {
                 loop: slideLoop && slideTotal > 1,
                 speed: 1000,
                 autoplay: {
-                    delay: 8000,
+                    delay: autoPlayInterval ? autoPlayInterval : 8000,
                     disableOnInteraction: false,
                 },
                 slidesPerView: "auto",
@@ -1214,6 +1216,63 @@ jQuery(document).ready(function ($) {
             },
         },
     });
+});
+
+// COUNTUP
+jQuery(document).ready(function () {
+    $.easing.easeOutExpoCustom = function (x) {
+        return x === 1 ? 1 : 1 - Math.pow(3, -10 * x);
+    };
+
+    $.easing.easeOutCubicCustom = function (x) {
+        return 1 - Math.pow(1 - x, 3);
+    };
+
+    function startCountAnimation(element) {
+        const $this = $(element),
+            countTo = $this.attr("data-stop"),
+            duration = Number($this.attr("data-duration")) || 2000;
+
+        function addSeparator(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        $({ countNum: $this.text() }).animate(
+            {
+                countNum: countTo,
+            },
+            {
+                duration: duration,
+                easing: "easeOutCubicCustom",
+                step: function () {
+                    $this.text(addSeparator(Math.floor(this.countNum)));
+                },
+                complete: function () {
+                    $this.text(addSeparator(this.countNum));
+                },
+            }
+        );
+    }
+
+    if ($(".countup").length) {
+        $(".countup").each(function () {
+            const countUp = $(this);
+            const ratioInView = 1 / 10;
+
+            function inViewCallback() {
+                if (!$("html").hasClass("overflow-hidden") && !countUp.hasClass("animated")) {
+                    countUp.addClass("in-view animated");
+                    startCountAnimation(countUp);
+                }
+            }
+
+            $(window).on("scroll resize", () => {
+                checkIfInView(ratioInView, countUp, inViewCallback, () => {});
+            });
+
+            checkIfInView(ratioInView, countUp, inViewCallback, () => {});
+        });
+    }
 });
 
 /*::* COPY *::*/

@@ -24,6 +24,24 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-dashboard:before {
+    content: "\e96a";
+}
+.ic-distance:before {
+    content: "\e96b";
+}
+.ic-diversity:before {
+    content: "\e96c";
+}
+.ic-pill:before {
+    content: "\e96d";
+}
+.ic-solar_power:before {
+    content: "\e96e";
+}
+.ic-tiktok-filled:before {
+    content: "\e969";
+}
 .ic-fax:before {
     content: "\e966";
 }

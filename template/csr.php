@@ -98,6 +98,29 @@
             </div>
         </div>
     </section>
+
+    <?php
+    $dual_image_block = [
+        "block" => [
+            [
+                "image" => "./assets/media/design/dual-image-3.jpg",
+                "ttl" => "นโยบายความยั่งยืน",
+                "desc" => "บริษัท อาร์เอ็กซ์ แมนูแฟคเจอริ่ง จำกัด ก่อตั้งในปี พศ. 2546 โดยผู้บริหารจากบริษัท อาร์เอ็กซ์ จำกัด",
+                "link" => $root . "csr.php",
+                "button-text" => "รายละเอียด"
+            ],
+            [
+                "image" => "./assets/media/design/dual-image-1.jpg",
+                "ttl" => "ติดต่อเรา",
+                "desc" => "บริษัท อาร์เอ็กซ์ จำกัด<br>93/90 ซอยประชานุกูล 2 ถนนรัชดาภิเษก<br>แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800",
+                "link" => $root . "contact.php",
+                "button-text" => "ติดต่อเรา"
+            ],
+        ]
+    ];
+
+    include($root . "include/sc-dual-image-block.php");
+    ?>
 </main>
 
 <?php include($root . "footer.php"); ?>

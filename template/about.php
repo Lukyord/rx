@@ -84,28 +84,102 @@
         </div>
     </section>
 
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <section data-section="about-timeline">
         <div class="sc-inner">
-            <div class="container">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-text">
-                            <div class="year animate fadeInLeft">
-                                <p>1975</p>
-                            </div>
-                            <div class="text animate fadeInLeft">
-                                <h4>จดทะเบียน หจก. อาร์เอ็กซ์ ฟามาซูติคัล</h4>
-                            </div>
-                            <div class="descriotion animate fadeInLeft">
-                                Company's registration of RX Pharmaceutical
-                            </div>
-                        </div>
-                        <div class="lotte"></div>
-                    </div>
+            <div class="container xl">
+                <div class="timeline"
+                    style="--right-stair: url(../media/design/stair-right.png); --left-stair: url(../media/design/stair-left.png);">
+
+                    <?php
+                    $timeline_arr = [
+                        [
+                            "year" => "1975",
+                            "text" => "จดทะเบียน หจก. อาร์เอ็กซ์ ฟามาซูติคัล",
+                            "desc" => "Company's registration of RX Pharmaceutical",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/9e207a95-2a0f-447a-9e67-98b08f581902/McZAioqtpv.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ],
+                        [
+                            "year" => "1976",
+                            "text" => "จดทะเบียน บริษัท อาร์เอ็กซ์ จำกัด",
+                            "desc" => "Company's registration of RX Company",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/ca8e1e7d-0f9e-4aa9-95d9-df3a27468209/jBa2cyFHdf.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ],
+                        [
+                            "year" => "1984",
+                            "text" => "จัดจำหน่ายยา Air-X",
+                            "desc" => "Start selling Air-X medicine ",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/6998398f-477d-4a3f-a9b4-f063ffde2de8/uehOVpK2DU.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ],
+                        [
+                            "year" => "2003",
+                            "text" => "ก่อตั้ง บริษัท อาร์เอ็กซ์ แมนูแฟคเจอริ่ง จำกัดและเริ่มธุรกิจให้บริการศูนย์เลสิก (รพ.ยันฮี)",
+                            "desc" => "RX Manufacturing was founded and start Lasik center (Yanhee Hospital)",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/de09c07e-9044-471a-b27b-9d16b0da8d61/D0DKLgUTUW.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ],
+                        [
+                            "year" => "2013",
+                            "text" => "เปิดโกดังเก็บสินค้าใหม่ขนาดพื้นที่ 2,000 Pallets",
+                            "desc" => "New warehouse",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/5708b4a3-55a3-4e06-a4bc-4f913c834806/WOVvBOGz6t.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ],
+                        [
+                            "year" => "2019",
+                            "text" => "เปิดและเริ่มดำเนินธุรกิจโรงประกอบรถพยาบาล REXCUER",
+                            "desc" => "Start Rexcuer ambulance service",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/0713dcba-d7f4-4c20-908b-55730bb3c64d/PhBKmtC9A4.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ],
+                        [
+                            "year" => "2020",
+                            "text" => "เริ่มผลิตและจัดจำหน่ายยา ONE GERD",
+                            "desc" => "Start manufaturing and selling ONE GERD",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/0a95b928-2d94-40fb-8f04-9fc5be98bba3/9I2kEhow8D.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ],
+                        [
+                            "year" => "2022",
+                            "text" => "เปิดให้บริการศูนย์เลสิกแห่งที่ 6 (รพ.ธรรมศาสตร์)",
+                            "desc" => "Open the 6th lasik center at Thammasart Hospital",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/55dc6bad-8d7c-48fe-a57f-c61a6b7247c9/OYfVVNjpFc.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ],
+                        [
+                            "year" => "2025",
+                            "text" => "ครบรอบ 50 ปี บริษัท อาร์เอ็กซ์ จำกัด",
+                            "desc" => "50th year annivesary of RX Pharmaceutical ",
+                            "lotte" => '<dotlottie-player src="https://lottie.host/890facdf-82ab-4e8c-9e08-e8defbc2efeb/RXOhbw6ZCu.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                        ]
+                    ];
+
+                    foreach ($timeline_arr as $index => $item) {
+                        include("include/el-timeline-item.php");
+                    }
+                    ?>
                 </div>
             </div>
         </div>
     </section>
+
+    <?php
+    $dual_image_block = [
+        "block" => [
+            [
+                "image" => "./assets/media/design/dual-image-3.jpg",
+                "ttl" => "นโยบายความยั่งยืน",
+                "desc" => "บริษัท อาร์เอ็กซ์ แมนูแฟคเจอริ่ง จำกัด ก่อตั้งในปี พศ. 2546 โดยผู้บริหารจากบริษัท อาร์เอ็กซ์ จำกัด",
+                "link" => $root . "csr.php",
+                "button-text" => "รายละเอียก"
+            ],
+            [
+                "image" => "./assets/media/design/dual-image-1.jpg",
+                "ttl" => "ติดต่อเรา",
+                "desc" => "บริษัท อาร์เอ็กซ์ จำกัด<br>93/90 ซอยประชานุกูล 2 ถนนรัชดาภิเษก<br>แขวงบางซื่อ เขตบางซื่อ กรุงเทพฯ 10800",
+                "link" => $root . "contact.php",
+                "button-text" => "ติดต่อเรา"
+            ],
+        ]
+    ];
+
+    include($root . "include/sc-dual-image-block.php");
+    ?>
 </main>
 
 <?php include($root . "footer.php"); ?>

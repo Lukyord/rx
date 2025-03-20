@@ -1,4 +1,8 @@
-<section data-section="dual-image-block">
+<section data-section="dual-image-block" class="<?php
+                                                if (isset($dual_image_block["sc-ttl"])) {
+                                                    echo "bg-white";
+                                                }
+                                                ?>">
     <div class="sc-inner sc-inner--follows">
         <div class="container xl">
             <?php
