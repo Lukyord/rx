@@ -264,7 +264,7 @@
                         <div class="swiper-wrapper">
                             <?php
                             for ($i = 1; $i <= 6; $i++) {
-
+                                $product_stagger_delay = true
                             ?>
                                 <div class="swiper-slide">
                                     <?php include('include/el-product-card.php') ?>

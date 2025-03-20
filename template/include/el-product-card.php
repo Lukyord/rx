@@ -1,4 +1,10 @@
-<div class="card animate fadeIn" data-card="product" data-wow-delay="<?= 0.2 * $i ?>s">
+<div class="card animate fadeIn" data-card="product"
+    <?php
+    if (isset($product_stagger_delay)) {
+        echo "data-wow-delay='" . 0.2 * $i . "s'";
+    }
+    ?>>
+    <a href="<?= $root; ?>product-single.php" class="link-overlay">&nbsp;</a>
     <div class="card-image">
         <?php
         $section_cover = "./assets/media/design/product-image-1.png";

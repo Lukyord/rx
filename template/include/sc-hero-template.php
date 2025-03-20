@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div class="hero-banner <?= $hero["banner-class"] ?>">
+            <div class="hero-banner <?= $hero["banner-class"] ?? '' ?>">
                 <!-- COVER -->
                 <?php
                 if (isset($hero["cover"]["pc"])) {

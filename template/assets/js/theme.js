@@ -803,6 +803,7 @@ jQuery(function ($) {
 jQuery(document).ready(function ($) {
     function showTab(elem) {
         var $tabContainer = $(elem).closest(".tab-container");
+
         $tabContainer.find(".tab-content").removeClass("active");
         $tabContainer.find(elem).addClass("active");
 
@@ -811,6 +812,15 @@ jQuery(document).ready(function ($) {
                 var scrollTop = $tabContainer.offset().top - $("#header-height").outerHeight() + 1;
                 $("html, body").animate({ scrollTop: scrollTop }, 800, "easeOutExpo");
             }, 250);
+        }
+    }
+
+    function showSiblingTab(elem) {
+        var $tabContainer = $(elem).closest(".tab-container");
+        var $siblingTab = $tabContainer.find(elem + "-sibling-tab");
+
+        if ($siblingTab) {
+            $tabContainer.find($siblingTab).addClass("active");
         }
     }
 
@@ -842,11 +852,15 @@ jQuery(document).ready(function ($) {
         var $tabLinks = $tabGroupParent.find(".tab-links").first();
         var _id = $(this).attr("href");
         var $select = $tabGroupParent.find("select.tab-select2");
+        var openSiblingTab = $(this).hasClass("open-sibling-tab");
 
         $tabLinks.find(".tab a").removeClass("active");
         $tabGroupParent.find("select option").prop("selected", false).removeAttr("selected");
         $(this).addClass("active");
         showTab(_id);
+        if (openSiblingTab) {
+            showSiblingTab(_id);
+        }
         $tabGroupParent
             .find('select option[value="' + _id + '"]')
             .prop("selected", true)
@@ -1498,5 +1512,28 @@ jQuery(document).ready(function ($) {
                 $this.removeClass("playing");
             }
         }
+    });
+});
+
+/*::* TRIGGER SUB TABS MOBILE *::*/
+jQuery(document).ready(function ($) {
+    $(".content-with-sub-tabs .sub-tabs").each(function () {
+        const subTabsList = $(this).find(".sub-tabs-list");
+        const subTabs = $(this).find(".sub-tab");
+        const subTabListTrigger = $(this).find(".sub-tab-list-trigger");
+
+        if (subTabsList.length) {
+            subTabListTrigger.on("click", function () {
+                if (subTabsList.hasClass("show")) {
+                    subTabsList.removeClass("show");
+                } else {
+                    subTabsList.addClass("show");
+                }
+            });
+        }
+
+        $(window).on("scroll resize", function () {
+            subTabsList.removeClass("show");
+        });
     });
 });

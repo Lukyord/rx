@@ -351,6 +351,50 @@
     }
 
     /* SECTION ====================*/
+    /* Content With Tabs */
+    .content-with-sub-tabs {
+        flex-direction: column;
+        grid-gap: var(--spacing-2sm);
+    }
+
+    .content-with-sub-tabs .sub-tabs {
+        width: 100%;
+        max-width: unset;
+        position: relative;
+    }
+
+    .content-with-sub-tabs .content {
+        max-width: unset;
+    }
+
+    .sub-tab-list-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sub-tabs-list {
+        --padding: var(--spacing-4xs);
+        opacity: 0;
+        position: absolute;
+        top: calc(100% + var(--padding));
+        left: calc(-1 * var(--padding));
+        width: calc(100% + var(--padding) * 2);
+        pointer-events: none;
+        background-color: var(--color-white);
+        padding: var(--padding);
+        transition: var(--duration) var(--timing-function);
+        border-radius: 0.8rem;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+    }
+
+    .sub-tabs-list.show {
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 10;
+    }
+
     /* General Card Info */
     [data-section="general-card-info"] .card-container {
         --column: 1.2;
@@ -621,6 +665,18 @@
     [data-section="csr-banner"] .banner-image {
         height: 169.2307692308vw;
         padding: var(--spacing-xs);
+    }
+
+    /* PAGE: Product */
+    /* Product List */
+    [data-section="product-list"] {
+        overflow: hidden;
+    }
+
+    [data-section="product-list"] .content .card-container {
+        --column: 2;
+        --gap-y: var(--spacing-sm);
+        --gap-x: 0;
     }
 }
 
