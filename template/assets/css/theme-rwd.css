@@ -319,6 +319,10 @@
         grid-gap: var(--spacing-2sm);
     }
 
+    .footer-body .footer-content {
+        grid-gap: var(--spacing-sm);
+    }
+
     .footer-body .footer-content .block {
         width: 100% !important;
     }
@@ -341,7 +345,18 @@
         align-items: flex-start;
     }
 
+    /* Tab Links */
+    .tab-links .swiper-slide {
+        width: 25rem !important;
+    }
+
     /* SECTION ====================*/
+    /* General Card Info */
+    [data-section="general-card-info"] .card-container {
+        --column: 1.2;
+        --gap-y: var(--spacing-xs);
+    }
+
     /* Header Desc Dual Block */
     [data-section="header-desc-dual-block"] .sc-header {
         flex-direction: column;
@@ -361,17 +376,19 @@
         padding-top: calc(var(--header-height) + var(--spacing-md));
     }
 
-    /* Banner Header */
+    /* Banner With Header */
     [data-section="hero-template"] .hero-banner.banner-with-header-text {
         aspect-ratio: 1.3308550186;
     }
 
-    [data-section="hero-template"] .hero-banner.banner-with-header-text .cover::before {
+    [data-section="hero-template"] .hero-banner.banner-with-header-text .cover::before,
+    [data-section="hero-template"] .hero-banner.banner-with-content .cover::before {
         background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 0.01%),
             linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(35, 22, 22, 0.1) 100%);
     }
 
-    [data-section="hero-template"] .hero-banner.banner-header {
+    [data-section="hero-template"] .banner-header,
+    [data-section="hero-template"] .banner-content {
         padding: var(--spacing-container);
     }
 
@@ -380,9 +397,18 @@
         aspect-ratio: 1;
     }
 
+    /* Banner With Content */
+    [data-section="hero-template"] .hero-banner.banner-with-content {
+        aspect-ratio: 0.5409090909;
+    }
+
     /* Dual Image Block */
     [data-section="dual-image-block"] .card-container {
         --column: 1;
+    }
+
+    [data-card="image-block"] .card-image {
+        aspect-ratio: 1.3308550186;
     }
 
     [data-card="image-block"] .card-content {
@@ -391,9 +417,9 @@
     }
 
     /* ELEMENT ====================*/
-    /* Tab Links */
-    .tab-links .swiper-slide {
-        width: 25rem !important;
+    /* General Card */
+    [data-card="general"] {
+        min-height: 115.38461538vw;
     }
 
     /* Product Card */

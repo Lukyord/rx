@@ -1230,7 +1230,7 @@ jQuery(document).ready(function () {
 
     function startCountAnimation(element) {
         const $this = $(element),
-            countTo = $this.attr("data-stop"),
+            countTo = Number($this.attr("data-stop").replace(/,/g, "")),
             duration = Number($this.attr("data-duration")) || 2000;
 
         function addSeparator(num) {

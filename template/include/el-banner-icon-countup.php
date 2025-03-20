@@ -16,7 +16,15 @@
 
             <!-- Count Up -->
             <div class="count-number">
-                <p><span class="countup" data-stop="<?= $item["stop-number"] ?>" data-duration="<?= $item["count-duration"] ?>"><?= $item["start-number"] ?></span> <?= $item["unit"] ?></p>
+                <p>
+                    <span
+                        class="countup"
+                        data-stop="<?= $item["stop-number"] ?>"
+                        data-number-placeholder="<?= $item["stop-number"] ?>&nbsp;&nbsp;"
+                        data-duration="<?= $item["count-duration"] ?>">
+                        <?= $item["start-number"] ?>
+                    </span><?= $item["unit"] ?>
+                </p>
             </div>
 
             <!-- Subtitle 2 -->
