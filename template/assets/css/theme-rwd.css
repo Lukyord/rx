@@ -351,6 +351,19 @@
     }
 
     /* SECTION ====================*/
+    /* Column Info Text */
+    [data-section="column-info-text"] .sc-inner {
+        padding-top: var(--gap-section);
+    }
+
+    [data-section="column-info-text"] .sc-content {
+        border-top: var(--border-theme);
+        display: flex;
+        flex-direction: column;
+        grid-gap: var(--spacing-sm);
+        padding-top: var(--spacing-xs);
+    }
+
     /* Content With Tabs */
     .content-with-sub-tabs {
         flex-direction: column;
@@ -677,6 +690,116 @@
         --column: 2;
         --gap-y: var(--spacing-sm);
         --gap-x: 0;
+    }
+
+    /* PAGE: Product Single */
+    /* Product Single */
+    [data-section="product-single"] .sc-inner {
+        padding-top: calc(var(--header-height) + var(--spacing-3xs));
+    }
+
+    [data-section="product-single"] .tab-container {
+        --gap: var(--spacing-2sm);
+        flex-direction: column;
+    }
+
+    [data-section="product-single"] .tab-container *:is(.gallery, .info) {
+        width: 100%;
+        aspect-ratio: unset;
+    }
+
+    [data-section="product-single"] .gallery {
+        aspect-ratio: 1 !important;
+        flex-shrink: 0;
+    }
+
+    [data-section="product-single"] .info .tab-content.active {
+        --gap: var(--spacing-sm);
+        --product-header-height: auto;
+        --product-body-height: auto;
+        --product-footer-height: auto;
+        padding: 0;
+    }
+
+    [data-section="product-single"] .info .tab-content .product-body-scroll {
+        height: 100%;
+        overflow-y: unset;
+        -webkit-mask-box-image: unset;
+    }
+
+    [data-section="product-single"] .info .tab-content .product-header {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    [data-section="product-single"] .info .tab-content .product-body-scroll .entry-content {
+        padding-bottom: var(--gap);
+    }
+
+    [data-section="product-single"] .info .tab-content .product-footer {
+        width: fit-content;
+        position: sticky;
+        bottom: var(--spacing-xs);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* PAGE: Service Rexcuer */
+    /* Video Banner */
+    [data-section="video-banner"] .video-container {
+        height: auto;
+        aspect-ratio: 1.79;
+    }
+
+    /* PAGE: Service Lasik */
+    /* Lasik Hero */
+    [data-section="lasik-hero"] .content {
+        --gap: var(--spacing-2sm);
+        flex-direction: column;
+    }
+
+    [data-section="lasik-hero"] .content *:is(.slide, .static) {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: unset;
+    }
+
+    [data-section="lasik-hero"] .slide [class*="swiper-button-"] {
+        top: calc((100vw - var(--spacing-container) * 2) / (1.479338843 * 2));
+    }
+
+    [data-card="lasik-slide"] {
+        height: auto !important;
+        color: var(--color-theme);
+        padding: 0;
+        flex-direction: column;
+        grid-gap: var(--spacing-xs);
+        overflow: visible;
+    }
+
+    [data-card="lasik-slide"] .cover {
+        position: static;
+        border-radius: 0.8rem;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .slide [data-card="lasik-slide"] .cover {
+        aspect-ratio: 1.479338843;
+    }
+
+    .static [data-card="lasik-slide"] .cover {
+        aspect-ratio: 0.7276422764;
+    }
+
+    [data-card="lasik-slide"] .cover::before {
+        content: none;
+    }
+
+    [data-card="lasik-slide"] .card-content {
+        grid-gap: var(--spacing-5xs);
+        z-index: 2;
+        position: relative;
     }
 }
 

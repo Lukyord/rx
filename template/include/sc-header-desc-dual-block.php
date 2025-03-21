@@ -1,5 +1,5 @@
 <section data-section="header-desc-dual-block">
-    <div class="sc-inner">
+    <div class="sc-inner <?= $sc["sc-inner-extra-class"] ?? "" ?>">
         <div class="container xl">
             <div class="sc-header">
                 <div class="sc-ttl animate fadeIn">

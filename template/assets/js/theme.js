@@ -1537,3 +1537,24 @@ jQuery(document).ready(function ($) {
         });
     });
 });
+
+/*::* POPUP *::*/
+jQuery(document).ready(function ($) {
+    if ($('[data-fancybox="gallery"]').length) {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            mainClass: "",
+            animated: true,
+            wheel: false,
+            hideScrollbar: false,
+            idle: false,
+            Hash: false,
+            Thumbs: false,
+            Toolbar: false,
+            contentClick: false,
+            dragToClose: false,
+            showClass: false,
+            compact: false,
+            closeButton: true,
+        });
+    }
+});

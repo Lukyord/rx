@@ -109,6 +109,7 @@
 <script src="<?php echo $root; ?>assets/plugin/gsap/ScrollTrigger.min.js"></script>
 <script src="<?php echo $root; ?>assets/plugin/gsap/ScrollToPlugin.min.js"></script>
 <script src="<?php echo $root; ?>assets/plugin/gsap/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 <!-- JS:CONFIG -->
 <script src="<?php echo $root; ?>assets/js/theme.js?v=<?php echo time(); ?>"></script>

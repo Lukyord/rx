@@ -175,8 +175,6 @@
         "block-2" => [
             "pc" => "./assets/media/design/csr-1-map-2.jpg",
             "mb" => "./assets/media/design/csr-1-map-2.jpg",
-            // "desc" => "<p>177 หมู่ 10 ตำบล นราภิรมย์ อำเภอบางเลน นครปฐม 73130 Google Maps
-            //             Service call : 061-413-4879</p>"
         ]
     ];
 

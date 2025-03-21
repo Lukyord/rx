@@ -3,7 +3,7 @@
                                                     echo "bg-white";
                                                 }
                                                 ?>">
-    <div class="sc-inner sc-inner--follows">
+    <div class="sc-inner <?= $dual_image_block["sc-inner-extra-class"] ?? "" ?>">
         <div class="container xl">
             <?php
             if (isset($dual_image_block["sc-ttl"])) {
