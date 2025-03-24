@@ -18,6 +18,7 @@
 
     :root {
         --font-size-h5: 1.6rem;
+        --font-size-body: 1.5rem;
 
         --line-height-h2: 1.1111111111;
         --line-height-h3: 1.1818181818;
@@ -352,10 +353,6 @@
 
     /* SECTION ====================*/
     /* Column Info Text */
-    [data-section="column-info-text"] .sc-inner {
-        padding-top: var(--gap-section);
-    }
-
     [data-section="column-info-text"] .sc-content {
         border-top: var(--border-theme);
         display: flex;
@@ -800,6 +797,45 @@
         grid-gap: var(--spacing-5xs);
         z-index: 2;
         position: relative;
+    }
+
+    /* Review */
+    [data-section="review"] .card-container {
+        --column: 1.2;
+    }
+
+    /* Accordion Container */
+    [data-section="accordion-slider"] .content {
+        flex-direction: column-reverse;
+    }
+
+    [data-section="accordion-slider"] .content *:is(.accordion-wrapper, .slide-container) {
+        width: 100%;
+    }
+
+    /* Info Card */
+    [data-section="info-card"] .sc-header {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    [data-section="info-card"] .card-container {
+        --column: 1.2;
+    }
+
+    /* PAGE: Service Consult */
+    /* Consult */
+    [data-section="consult"] .tab-container {
+        padding: var(--gap-section) var(--spacing-xs);
+        flex-direction: column;
+        grid-gap: var(--spacing-lg);
+    }
+
+    [data-section="consult"] *:is(.tab-links, .tab-contents) {
+        width: 100%;
+    }
+
+    [data-section="consult"] .consult-qr .qr-container {
+        width: 90%;
     }
 }
 

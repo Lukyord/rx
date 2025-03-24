@@ -769,6 +769,7 @@ jQuery(function ($) {
                 var $neighbors = $thisParent.siblings();
                 var $neighborContents = $neighbors.find("> .entry-panel");
                 var $thisPanel = $thisParent.find("> .entry-panel");
+                var $noAnimate = $parent.hasClass("no-animate");
 
                 if ($parent.hasClass("toggle")) {
                     if ($thisParent.hasClass("active")) return;
@@ -778,6 +779,8 @@ jQuery(function ($) {
 
                     $thisParent.toggleClass("active");
                     $thisPanel.slideToggle(800, "easeInOutCubic");
+
+                    if ($noAnimate) return;
 
                     setTimeout(function () {
                         var scrollTop = $thisParent.offset().top - windowHeight;
@@ -1501,7 +1504,7 @@ jQuery(document).ready(function ($) {
     $(".video-play-button").on("click", function (e) {
         e.preventDefault();
         var $this = $(this);
-        var $video = $this.siblings("video");
+        var $video = $this.siblings("video") || $this.sublings(".object-fit").find("video");
 
         if ($video.length) {
             if ($video[0].paused) {

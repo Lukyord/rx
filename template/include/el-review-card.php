@@ -1,5 +1,5 @@
 <div class="card" data-card="review">
-    <a href="<?= $card["iframe-link"] ?>" class="link-overlay" data-fancybox="gallery">
+    <a href="<?= $card["iframe-link"] ?>?autoplay=0&rel=0&controls=1" class="link-overlay" data-fancybox="gallery" data-tyep="iframe">
         &nbsp;
     </a>
     <div class="card-image">

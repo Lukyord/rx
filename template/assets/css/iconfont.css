@@ -24,6 +24,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-description:before {
+    content: "\e971";
+}
+.ic-remove:before {
+    content: "\e96f";
+}
+.ic-add:before {
+    content: "\e970";
+}
 .ic-dashboard:before {
     content: "\e96a";
 }

@@ -305,7 +305,7 @@
     </section>
 
     <section data-section="review">
-        <div class="sc-inner">
+        <div class="sc-inner sc-inner--precedes">
             <div class="container xl">
                 <div class="sc-header">
                     <div class="sc-ttl">
@@ -325,6 +325,22 @@
                                         "mb" => "./assets/media/design/lasik-review-cover.jpg"
                                     ],
                                     "subttl" => "คุณจอส เวอาห์"
+                                ],
+                                [
+                                    "iframe-link" => "https://www.youtube.com/embed/IpFX2vq8HKw?si=HthACJtT-cr1nAu-",
+                                    "cover" => [
+                                        "pc" => "./assets/media/design/lasik-review-cover.jpg",
+                                        "mb" => "./assets/media/design/lasik-review-cover.jpg"
+                                    ],
+                                    "subttl" => "คุณจอส เวอาห์"
+                                ],
+                                [
+                                    "iframe-link" => "https://www.youtube.com/embed/IpFX2vq8HKw?si=HthACJtT-cr1nAu-",
+                                    "cover" => [
+                                        "pc" => "./assets/media/design/lasik-review-cover.jpg",
+                                        "mb" => "./assets/media/design/lasik-review-cover.jpg"
+                                    ],
+                                    "subttl" => "คุณจอส เวอาห์"
                                 ]
                             ];
 
@@ -334,6 +350,336 @@
                                     <?php
                                     include($root . "include/el-review-card.php");
                                     ?>
+                                </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-section="accordion-slider">
+        <div class="sc-inner sc-inner--follows sc-inner--precedes">
+            <div class="container xl">
+                <div class="content">
+                    <div class="accordion-wrapper">
+                        <h5 class="c-light-green">เทคโนโลยีการรักษา</h5>
+                        <div class="accordion-container toggle trigger-first">
+                            <?php
+                            $accordion_arr = [
+                                [
+                                    "title" => "SMILE pro",
+                                    "content" => "
+                                            <p>
+                                                เทคโนโลยีการผ่าตัดแบบแผลเล็ก Minimally Invasive Refractive Surgery SMILE pro ให้คุณกลับมาทำกิจกรรมที่รักได้ ภายใน 1 สัปดาห์
+                                            </p>
+                                            <ul>
+                                                <li>เป็นเทคโนโลยีที่ทันสมัย และรวดเร็วที่สุดในปัจจุบัน</li>
+                                                <li>พัฒนามาจาก ReLEx SMILE</li>
+                                                <li>ใช้เวลาเพียง 8-10 วินาทีในการยิงเลเซอร์</li>
+                                                <li>โอกาสเกิดผลข้างเคียง อาการตาแห้งและแสงฟุ้งกระจายน้อยที่สุด</li>
+                                                <li>ดีไซน์ของเครื่องแบบเปิดโล่ง ทำให้ผู้เข้ารับการผ่าตัดผ่อนคลายมากขึ้น</li>
+                                            </ul>
+                                        "
+                                ],
+                                [
+                                    "title" => "SMILE",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "FEMTO",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "LASIK",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "PRK และ Trans PRK",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                            ];
+
+                            foreach ($accordion_arr as $index => $accordion) {
+                            ?>
+                                <div class="accordion">
+                                    <div class="entry-title">
+                                        <h5><?= $accordion["title"] ?></h5>
+                                    </div>
+                                    <div class="entry-panel">
+                                        <div class="entry-content">
+                                            <?= $accordion["content"] ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="slide-container">
+                        <div class="swiper auto fade">
+                            <div class="swiper-wrapper">
+                                <?php
+                                $slide_content = [
+                                    [
+                                        "pc" => "./assets/media/design/lasik-video.mp4",
+                                        "mb" => "./assets/media/design/lasik-info-1.jpg"
+                                    ],
+                                    [
+                                        "pc" => "./assets/media/design/lasik-video.mp4",
+                                        "mb" => "./assets/media/design/lasik-video.mp4"
+                                    ],
+                                    [
+                                        "pc" => "./assets/media/design/lasik-info-1.jpg",
+                                        "mb" => "./assets/media/design/lasik-info-1.jpg"
+                                    ]
+                                ];
+
+                                foreach ($slide_content as $index => $content) {
+                                ?>
+                                    <div class="swiper-slide">
+                                        <?php
+                                        $section_cover = $content["pc"];
+                                        $section_cover_m = $content["mb"];
+                                        include("include/function-group.php");
+                                        ?>
+                                        <?php
+                                        $isVideoCover = preg_match("/\.(mp4)$/", $content["pc"]);
+                                        $isVideoCoverM = preg_match("/\.(mp4)$/", $content["mb"]);
+
+                                        if ($isVideoCover) { ?>
+                                            <a href="javascript:;" class="video-play-button show-sm"></a>
+                                        <?php } elseif ($isVideoCoverM) { ?>
+                                            <a href="javascript:;" class="video-play-button hidden-device-sm"></a>
+                                        <?php } ?>
+                                    </div>
+                                <?php } ?>
+                            </div>
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-section="info-card">
+        <div class="sc-inner sc-inner--precedes sc-inner--follows">
+            <div class="container xl">
+                <div class="content">
+                    <div class="sc-header">
+                        <div class="sc-ttl">
+                            <h2>ตารางเปรียบเทียบ การรักษาปัญหาสายตาผิดปกติ</h2>
+                        </div>
+                    </div>
+
+                    <div class="sc-subttl">
+                        <p>ตารางเปรียบเทียบ การรักษาปัญหาสายตาผิดปกติ เพื่อให้ผูัที่สนใจเข้ารับการผ่าตัด ทราบถึงประโยชน์และความเสี่ยงของเทคโนโลยี ด้วยตนเองเบื้องต้น</p>
+                    </div>
+
+                    <div class="card-container" data-card-layout="slider">
+                        <div class="swiper auto">
+                            <div class="swiper-wrapper">
+                                <?php
+                                $card_arr = [
+                                    [
+                                        "media" => [
+                                            "pc" => "./assets/media/design/lasik-method.jpg",
+                                            "mb" => "./assets/media/design/lasik-method.jpg"
+                                        ],
+                                        "ttl" => "PRK",
+                                        "desc" =>  "PRK เป็นการลอกผิวกระจกตาชั้นนอกออก จึงจำเป็นต้องใส่คอนแทคเลนส์ปิดแผลไว้หลังผ่าตัด จนกว่าเยื่อบุผิวกระจกตาจะงอกขึ้นมาใหม่ ผู้ป่วยจึงมักจะรู้สึกไม่ค่อยสบายตาในช่วงพักฟื้น แต่จะค่อยๆดีขึ้น"
+                                    ],
+                                    [
+                                        "media" => [
+                                            "pc" => "./assets/media/design/lasik-method.jpg",
+                                            "mb" => "./assets/media/design/lasik-method.jpg"
+                                        ],
+                                        "ttl" => "LASIK / FEMTO",
+                                        "desc" =>  "LASIK / Femto หลังผ่าตัด ผู้ป่วยจะเห็นชัดกว่า 90% แต่จะมีอาการตาแห้งชั่วคราวหลังการรักษามากที่สุด เนื่องจากการเปิดฝากระจกตา ทำให้เกิดการรับกวนเส้นประสาทตา มากกว่าวิธีอื่น"
+                                    ],
+                                    [
+                                        "media" => [
+                                            "pc" => "./assets/media/design/lasik-method.jpg",
+                                            "mb" => "./assets/media/design/lasik-method.jpg"
+                                        ],
+                                        "ttl" => "SMILE / SMILE pro",
+                                        "desc" =>  "SMILE / SMILE pro ผลข้างเคียงเรื่องการการตาแห้งและแสงฟุ้งกระจายน้อยกว่าวิธีอื่น เนื่องจากไม่มีการเปิดฝากระจกตา อักทั้งความไวในการผ่าตัดยังส่งผลให้คนไข้รู้สึกสบายและผ่อนคลายกว่าวิธีอื่นๆ หมดกังวลเรื่องฝากระจกตาเปิด"
+                                    ],
+                                ];
+
+                                foreach ($card_arr as $index => $card) {
+                                ?>
+                                    <div class="swiper-slide">
+                                        <div class="card" data-card="info">
+                                            <div class="card-image">
+                                                <?php
+                                                $section_cover = $card["media"]["pc"];
+                                                $section_cover_m = $card["media"]["mb"];
+                                                include("include/function-group.php");
+                                                ?>
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="card-ttl">
+                                                    <h5>
+                                                        <?= $card["ttl"] ?>
+                                                    </h5>
+                                                </div>
+
+                                                <div class="card-desc">
+                                                    <p>
+                                                        <?= $card["desc"] ?>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-section="column-info-text">
+        <div class="sc-inner sc-inner--precedes sc-inner--follows">
+            <div class="container xl">
+                <div class="sc-content">
+                    <div class="sc-header">
+                        <div class="sc-ttl animate fadeIn">
+                            <h2>คำถามที่พบบ่อย</h2>
+                        </div>
+                    </div>
+
+                    <div class="sc-desc animate fadeIn">
+                        <strong>
+                            ข้อปฏิบัติก่อนและหลังทำเลสิค
+                        </strong>
+                        <ul class="file-list">
+                            <?php
+                            $file_arr = [
+                                [
+                                    "name" => "การเตรียมตัวก่อนทำเลสิก",
+                                    "link" => "./assets/media/design/lasik-info-1.jpg"
+                                ],
+                                [
+                                    "name" => "ข้อปฏิบัติตัวหลังทำ SMILE pro และ SMILE",
+                                    "link" => "./assets/media/design/lasik-info-1.jpg"
+                                ],
+                                [
+                                    "name" => "ข้อปฏิบัติตัวหลังทำ Femto-LASIK และ LASIK",
+                                    "link" => "./assets/media/design/lasik-info-1.jpg"
+                                ],
+                                [
+                                    "name" => "ข้อปฏิบัติตัวหลังทำ PRK",
+                                    "link" => "./assets/media/design/lasik-info-1.jpg"
+                                ],
+                                [
+                                    "name" => "วิธีทำความสะอาดรอบดวงตา",
+                                    "link" => "./assets/media/design/lasik-info-1.jpg"
+                                ]
+                            ];
+
+                            foreach ($file_arr as $index => $file) {
+                            ?>
+                                <li>
+                                    <a href="<?= $file["link"] ?>" download>
+                                        <i class="ic ic-description"></i>
+                                        <span><?= $file["name"] ?></span>
+                                    </a>
+                                </li>
+                            <?php  } ?>
+                        </ul>
+                    </div>
+
+                    <div class="sc-desc animate fadeIn">
+                        <strong>
+                            คำถามที่พบบ่อย
+                        </strong>
+                        <div class="accordion-container toggle trigger-first">
+                            <?php
+                            $accordion_arr = [
+                                [
+                                    "title" => "ค่าสายตาสั้นและเอียงเท่าไหร่ถึงทำเลสิคได้",
+                                    "content" => "
+                                            <p>
+                                                ตามมาตรฐานที่ FDA ไทยแนะนํา สั้นเอียงรวมกันไม่เกิน 1200 แต่แนะนำให้เข้ามาตรวจเพื่อดูความหนาและความโค้งของกระจกตาด้วยและยาวแต่กำเนิดไม่ควรเกิน 600                                            
+                                            </p>
+                                        "
+                                ],
+                                [
+                                    "title" => "ค่าสายตาสั้น, ค่าสายตาเอียง ทำเลสิคได้ไหม",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "มีค่าสายตายาวด้วย ทำเลสิคได้ไหม",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "ใส่คอนแทคเลนส์มา...ปี สามารถทำเลสิคได้ไหม",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "วุ้นในตาเลื่อนทำเลสิคได้ไหม",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "หากเป็นต้อด้วย ทำเลสิคได้ไหม",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "ทำเลสิคไปแล้ว สายตาจะกลับมาสั้นอีกไหม",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                                [
+                                    "title" => "ทำเลสิคไปแล้ว จะสามารถใส่คอนแทดเลนส์สีกเพื่อความสวยงามได้ไหม",
+                                    "content" => "
+                                        <p>Lorem ipsum</p>
+                                    "
+                                ],
+                            ];
+
+                            foreach ($accordion_arr as $index => $accordion) {
+                            ?>
+                                <div class="accordion">
+                                    <div class="entry-title">
+                                        <h5><?= $accordion["title"] ?></h5>
+                                    </div>
+                                    <div class="entry-panel">
+                                        <div class="entry-content">
+                                            <?= $accordion["content"] ?>
+                                        </div>
+                                    </div>
                                 </div>
                             <?php
                             }
