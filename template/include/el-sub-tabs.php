@@ -12,7 +12,7 @@
     <?php
     foreach ($sub_tab_arr as $index => $subtab) {
     ?>
-        <div class="sub-tab-item <?= $index == 0 ? "active" : "" ?>">
+        <div class="sub-tab-item animate fadeIn <?= $index == 0 ? "active" : "" ?>">
             <a href="<?php echo $subtab["link"]; ?>" class="sub-tab-link">
                 <?php echo $subtab["text"]; ?>
             </a>

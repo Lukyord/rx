@@ -263,9 +263,11 @@ form.wpcf7-form.submitting button[type="submit"] {
 
 /*WP PAGINATION====================*/
 .wp-pagenavi {
-    --button-height: 52px;
     margin: 0;
     padding: 0;
+    padding-top: var(--spacing-xs);
+    margin-top: var(--spacing-xl);
+    border-top: var(--border-theme);
     position: relative;
     display: flex;
     align-items: center;
@@ -286,51 +288,59 @@ form.wpcf7-form.submitting button[type="submit"] {
     margin: 0;
     position: relative;
     display: flex;
+    grid-gap: var(--spacing-4xs);
     align-items: center;
     justify-content: center;
     text-align: center;
     width: auto;
-    min-width: var(--button-height);
-    height: var(--button-height);
-    padding: var(--spacing-2xs);
-    color: var(--color-black);
-    background: var(--color-white);
-    border: var(--border-width) solid var(--border-color);
+    color: var(--color-theme);
     border-radius: var(--radius);
     overflow: hidden;
 }
 .wp-pagenavi > *:hover {
-    color: var(--color-theme) !important;
+    color: var(--color-active) !important;
 }
 .wp-pagenavi > *.current {
     color: var(--color-white) !important;
     background: var(--color-theme) !important;
-    border-color: var(--color-theme) !important;
+    min-width: 3rem;
+    height: 3rem;
 }
 .wp-pagenavi > *[class*="postslink"] {
     order: 1;
-    font-size: 0;
+    font-size: var(--font-size-button);
+    line-height: var(--line-height-button);
     position: relative;
     top: auto;
     bottom: auto;
     left: auto;
     right: auto;
     z-index: 1;
+    border: none;
+    background-color: none;
+    padding: 0;
 }
-.wp-pagenavi > .previouspostslink,
-.wp-pagenavi:not(.has-prev) > .nextpostslink {
+.wp-pagenavi > .previouspostslink {
+    order: 0;
+    margin-right: auto;
+}
+
+.wp-pagenavi > .nextpostslink {
+    order: 2;
     margin-left: auto;
 }
+
 .wp-pagenavi > *:is(.previouspostslink, .nextpostslink):before {
     font-family: "iconfont";
     font-weight: normal;
-    font-size: var(--font-size-body);
+    font-size: var(--font-size-button);
 }
 .wp-pagenavi > .previouspostslink:before {
-    content: "\e90d";
+    content: "\e909";
 }
 .wp-pagenavi > .nextpostslink:before {
-    content: "\e90e";
+    content: "\e90a";
+    order: 2;
 }
 
 @media (max-width: 575px) {

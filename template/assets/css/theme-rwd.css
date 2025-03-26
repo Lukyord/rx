@@ -93,6 +93,52 @@
     [data-section="index-hero-banner"] .card-container {
         --column: 3;
     }
+
+    /* PAGE: News */
+    /* News Feed */
+    [data-section="news-feed"] .tab-content .card-container [data-card="news"]:first-child {
+        grid-column: span 2;
+        aspect-ratio: 1.4746835443;
+        color: var(--color-white);
+        display: flex;
+        align-items: flex-end;
+    }
+
+    [data-section="news-feed"] [data-card="news"]:first-child .card-image {
+        position: absolute;
+        inset: 0;
+        aspect-ratio: unset;
+    }
+
+    [data-section="news-feed"] [data-card="news"]:first-child .card-image:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+        z-index: 2;
+    }
+
+    html.no-touchevents
+        [data-section="news-feed"]
+        [data-card="news"]:first-child:hover
+        *:is(.card-date, .card-ttl, .underline) {
+        color: var(--color-white);
+    }
+
+    [data-section="news-feed"] [data-card="news"]:first-child .card-content {
+        z-index: 5;
+    }
+
+    [data-section="news-feed"] [data-card="news"]:first-child .card-content .card-date {
+        color: var(--color-white);
+    }
+
+    [data-section="news-feed"] .tab-content .card-container [data-card="news"]:nth-child(2) {
+        height: fit-content;
+    }
 }
 
 @media (min-width: 992px) {
@@ -199,12 +245,19 @@
         font-size: 1.6rem;
     }
 
+    .header-nav .header-brand,
+    .header-nav .header-menu-ctrl {
+        position: relative;
+        z-index: 100;
+    }
+
     .panel {
         position: fixed;
-        top: var(--header-height);
+        top: 0;
         left: 0;
         width: 100vw;
-        height: calc(100dvh - var(--header-height));
+        height: 100dvh;
+        padding-top: var(--header-height);
         max-height: 100dvh;
         overflow: hidden;
         background-color: var(--color-white);
@@ -836,6 +889,87 @@
 
     [data-section="consult"] .consult-qr .qr-container {
         width: 90%;
+    }
+
+    /* PAGE: News */
+    /* News Feed */
+    [data-section="news-single"] .banner-image {
+        aspect-ratio: 1;
+    }
+
+    [data-section="news-feed"] .tab-content .card-container {
+        --column: 1;
+        --gap-y: var(--spacing-2sm);
+    }
+
+    [data-section="news-feed"] .tab-content .card-container [data-card="news"]:first-child {
+        grid-column: span 1;
+    }
+
+    [data-section="news-feed"] .tab-content .card-container [data-card="news"]:first-child {
+        width: 100vw;
+        margin-left: calc(-1 * var(--spacing-container));
+        border-radius: 0;
+        background-color: unset;
+        box-shadow: unset;
+        padding: 0;
+    }
+
+    [data-section="news-feed"] [data-card="news"]:first-child .card-image {
+        border-radius: 0;
+    }
+
+    [data-section="news-feed"] [data-card="news"]:first-child .card-content .card-date {
+        color: var(--color-black);
+    }
+
+    /* Related News */
+    [data-section="related-news"] .card-container {
+        --column: 1.2;
+    }
+
+    /* PAGE: Career */
+    /* Career List */
+    [data-section="career-list"] .card-container {
+        --column: 1;
+        --gap-x: var(--spacing-2sm);
+    }
+
+    /* PAGE: Career-Single */
+    /* Career Single */
+    [data-section="career-single"] .content {
+        flex-direction: column;
+        --gap: var(--spacing-2sm);
+    }
+
+    [data-section="career-single"] .content *:is(.details, .career-form) {
+        width: 100%;
+    }
+
+    [data-section="career-single"] .details .block {
+        max-width: 100%;
+    }
+
+    [data-section="career-single"] .content .career-form .submit-button-wrapper {
+        height: calc(var(--button-height) + var(--spacing-xs));
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    [data-section="career-single"] .content .career-form .button[type="submit"] {
+        position: fixed;
+        bottom: var(--spacing-xs);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw;
+        transition: none;
+        margin: 0 auto;
+    }
+
+    [data-section="career-single"] .content .career-form .button[type="submit"].static {
+        transform: none;
+        position: static;
     }
 }
 

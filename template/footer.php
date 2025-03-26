@@ -26,19 +26,19 @@
                     </ul>
                 </div>
                 <div class="block">
-                    <ul>
+                    <ul class="with-icon">
                         <li>
                             <h4 class="list-ttl">ติดต่อ</h4>
                         </li>
-                        <li class="with-icon">
+                        <li>
                             <i class="ic ic-phone"></i>
                             <a href="tel:+6629100950">0 2910 0950 (10 คู่สาย)</a>
                         </li>
-                        <li class="with-icon">
+                        <li>
                             <i class="ic ic-mail-min"></i>
                             <a href="mailto:customercare@rx.co.th">customercare@rx.co.th</a>
                         </li>
-                        <li class="with-icon">
+                        <li>
                             <i class="ic ic-map-marker"></i>
                             <a href="#outer">
                                 93/90 ซอยประชานุกูล 2 ถนนรัชดาภิเษก

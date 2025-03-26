@@ -625,9 +625,9 @@ jQuery(document).ready(function ($) {
         $this.addClass("select2-parent");
 
         // Handle device-specific cases
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            $select.select2("destroy").closest(".select").removeClass("select2-parent");
-        }
+        // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //     $select.select2("destroy").closest(".select").removeClass("select2-parent");
+        // }
 
         $this.find("select").click(function () {
             $(this)
@@ -679,9 +679,16 @@ jQuery(document).ready(function ($) {
                     '<input type="text" class="file-upload-input" placeholder="' + placeholder + '" readonly />'
                 ),
                 $button = $(
-                    '<div class="file-upload-action"><button type="button" class="file-upload-button">' +
+                    '<div class="file-upload-action"><button type="button" class="file-upload-button button">' +
                         buttonText +
                         "</button></div>"
+                ),
+                $placeholder = $(
+                    '<div class="file-upload-placeholder"><div class="header"><p class="title">' +
+                        $(this).closest(".custom-file-upload").data("placeholder") +
+                        '</p><span class="file-size size-description c-mid-gray"> </span><button type="button" class="cancel-upload" style="display: none;">✖</button></div><p class="c-mid-gray size-description file-description">' +
+                        $(this).closest(".custom-file-upload").data("subplaceholder") +
+                        '</p><progress class="file-progress" value="0" max="100" style="display: none;"></progress></div>'
                 ),
                 $label = $(
                     '<div class="file-upload-action"><label class="file-upload-button" for="' +
@@ -693,7 +700,7 @@ jQuery(document).ready(function ($) {
 
             $file.css({ position: "absolute", left: "-9999px" });
 
-            $wrap.insertAfter($file).append($file, $input, isIE ? $label : $button);
+            $wrap.insertAfter($file).append($button, $file, $placeholder);
 
             $file.attr("tabIndex", -1);
             $button.attr("tabIndex", -1);
@@ -702,16 +709,76 @@ jQuery(document).ready(function ($) {
                 $file.click();
             });
 
+            function updatePlaceholder(title, fileSize) {
+                $placeholder.find(".title").text(title);
+                $placeholder.find(".file-size").text(fileSize);
+            }
+
+            function formatFileSize(bytes) {
+                if (bytes === 0) return "0 Bytes";
+                var k = 1024,
+                    sizes = ["Bytes", "KB", "MB", "GB"],
+                    i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+            }
+
             $file.change(function () {
-                var fileArr = $file[0].files,
-                    filename = multipleSupport
-                        ? Array.from(fileArr)
-                              .map((file) => file.name)
-                              .join(", ")
-                        : $file.val().split("\\").pop();
+                var files = [],
+                    fileArr = $file[0].files,
+                    filename,
+                    fileSizeText = "";
+
+                // Reference to UI elements
+                var $customFileUpload = $file.closest(".custom-file-upload");
+                var $progressBar = $customFileUpload.find(".file-progress");
+                var $cancelBtn = $customFileUpload.find(".cancel-upload");
+
+                if ($file.attr("multiple")) {
+                    for (var i = 0, len = fileArr.length; i < len; i++) {
+                        files.push(fileArr[i].name);
+                    }
+                    filename = files.join(", ");
+                    fileSizeText = fileArr.length + " files";
+                } else {
+                    filename = $file.val().split("\\").pop();
+                    fileSizeText = fileArr.length > 0 ? formatFileSize(fileArr[0].size) : "";
+                }
 
                 $input.val(filename).attr("title", filename).focus();
-                $input.closest(".input").addClass("filled");
+                updatePlaceholder(filename, fileSizeText);
+
+                $customFileUpload.addClass("filled");
+
+                if (this.files.length === 0) {
+                    $customFileUpload.removeClass("filled");
+                    updatePlaceholder("No file chosen", "");
+                    return;
+                }
+
+                $progressBar.val(0).show();
+                $cancelBtn.show();
+
+                // Simulating File Upload Progress (Replace with real upload logic)
+                var progress = 0;
+                var interval = setInterval(function () {
+                    progress += 10;
+                    $progressBar.val(progress);
+
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        $progressBar.hide();
+                    }
+                }, 300);
+
+                $cancelBtn.off("click").on("click", function () {
+                    clearInterval(interval);
+                    $file.val("");
+                    $input.val("").attr("title", "");
+                    updatePlaceholder("No file chosen", "");
+                    $customFileUpload.removeClass("filled");
+                    $progressBar.hide().val(0);
+                    $cancelBtn.hide();
+                });
             });
 
             $input.on({
@@ -721,11 +788,18 @@ jQuery(document).ready(function ($) {
                 keydown: function (e) {
                     if (e.which === 13) {
                         // Enter
-                        $file.click();
+                        if (!isIE) {
+                            $file.trigger("click");
+                        }
                     } else if (e.which === 8 || e.which === 46) {
                         // Backspace or Delete
-                        $file.val("").trigger("change");
-                        $input.val("").removeClass("filled");
+                        $file.replaceWith(($file = $file.clone(true)));
+                        $file.trigger("change");
+                        $input.val("");
+                    } else if (e.which === 9) {
+                        return;
+                    } else {
+                        return false;
                     }
                 },
             });
@@ -1560,4 +1634,23 @@ jQuery(document).ready(function ($) {
             closeButton: true,
         });
     }
+});
+
+/*::* CAREER FORM *::*/
+jQuery(document).ready(function ($) {
+    $(".career-form").each(function () {
+        const submitButton = $(this).find(".button[type='submit']");
+
+        $(window).on("scroll resiz load", function () {
+            checkIfFullyInView(
+                $(".submit-button-wrapper"),
+                () => {
+                    submitButton.addClass("static");
+                },
+                () => {
+                    submitButton.removeClass("static");
+                }
+            );
+        });
+    });
 });

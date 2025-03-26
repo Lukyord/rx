@@ -413,7 +413,7 @@
 
                             foreach ($accordion_arr as $index => $accordion) {
                             ?>
-                                <div class="accordion">
+                                <div class="accordion animate fadeIn">
                                     <div class="entry-title">
                                         <h5><?= $accordion["title"] ?></h5>
                                     </div>
@@ -428,7 +428,7 @@
                             ?>
                         </div>
                     </div>
-                    <div class="slide-container">
+                    <div class="slide-container animate fadeIn">
                         <div class="swiper auto fade">
                             <div class="swiper-wrapper">
                                 <?php
@@ -482,12 +482,12 @@
             <div class="container xl">
                 <div class="content">
                     <div class="sc-header">
-                        <div class="sc-ttl">
+                        <div class="sc-ttl animate fadeIn">
                             <h2>ตารางเปรียบเทียบ การรักษาปัญหาสายตาผิดปกติ</h2>
                         </div>
                     </div>
 
-                    <div class="sc-subttl">
+                    <div class="sc-subttl animate fadeIn">
                         <p>ตารางเปรียบเทียบ การรักษาปัญหาสายตาผิดปกติ เพื่อให้ผูัที่สนใจเข้ารับการผ่าตัด ทราบถึงประโยชน์และความเสี่ยงของเทคโนโลยี ด้วยตนเองเบื้องต้น</p>
                     </div>
 
@@ -525,7 +525,7 @@
                                 foreach ($card_arr as $index => $card) {
                                 ?>
                                     <div class="swiper-slide">
-                                        <div class="card" data-card="info">
+                                        <div class="card animate fadeIn" data-card="info">
                                             <div class="card-image">
                                                 <?php
                                                 $section_cover = $card["media"]["pc"];
@@ -570,7 +570,7 @@
                     </div>
 
                     <div class="sc-desc animate fadeIn">
-                        <strong>
+                        <strong class="animate fadeIn">
                             ข้อปฏิบัติก่อนและหลังทำเลสิค
                         </strong>
                         <ul class="file-list">
@@ -600,7 +600,7 @@
 
                             foreach ($file_arr as $index => $file) {
                             ?>
-                                <li>
+                                <li class="animate fadeIn">
                                     <a href="<?= $file["link"] ?>" download>
                                         <i class="ic ic-description"></i>
                                         <span><?= $file["name"] ?></span>
@@ -611,7 +611,7 @@
                     </div>
 
                     <div class="sc-desc animate fadeIn">
-                        <strong>
+                        <strong class="animate fadeIn">
                             คำถามที่พบบ่อย
                         </strong>
                         <div class="accordion-container toggle trigger-first">
@@ -671,7 +671,7 @@
 
                             foreach ($accordion_arr as $index => $accordion) {
                             ?>
-                                <div class="accordion">
+                                <div class="accordion animate fadeIn">
                                     <div class="entry-title">
                                         <h5><?= $accordion["title"] ?></h5>
                                     </div>

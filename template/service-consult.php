@@ -53,7 +53,7 @@
                      <div class="tab-links">
                          <div class="accordion-container toggle no-animate trigger-first">
                              <?php foreach ($consult_arr as $index => $consult) : ?>
-                                 <div class="accordion">
+                                 <div class="accordion animate fadeIn">
                                      <div class="entry-title tab">
                                          <a href="#<?= $consult["tab-id"] ?>" class="<?= $index == 0 ? "active" : ""  ?>">
                                              <h2><?= $consult["ttl"] ?></h2>
@@ -74,7 +74,7 @@
                      <div class="tab-contents">
                          <?php foreach ($consult_arr as $index => $consult) : ?>
                              <div class="tab-content <?= $index == 0 ? "active" : ""  ?>" id="<?= $consult["tab-id"] ?>">
-                                 <div class="consult-qr">
+                                 <div class="consult-qr animate fadeIn">
                                      <p><?= $consult["contact-qr-text"] ?></p>
                                      <div class="qr-container">
                                          <img src="<?= $consult["contact-qr-image"] ?>" alt="<?= $consult["contact-qr-text"] ?>" />
