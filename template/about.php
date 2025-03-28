@@ -7,6 +7,7 @@
     $hero = [
         "subttl" => "เกี่ยวกับเรา",
         "ttl" => "ประวัติและวิสัยทัศน์ของบริษัท",
+        "banner-class" => "banner-with-header-text",
         "cover" => [
             "pc" => "./assets/media/design/about-hero.jpg",
             "mb" => "./assets/media/design/about-hero.jpg"

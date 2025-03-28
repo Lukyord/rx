@@ -1575,10 +1575,29 @@ jQuery(document).ready(function ($) {
 
 /*::* VIDEO PLAY BUTTON *::*/
 jQuery(document).ready(function ($) {
+    $(".video-play-button").each(function () {
+        var $this = $(this);
+        var $video = $this.siblings("video");
+
+        if (!$video.length) {
+            $video = $this.siblings(".object-fit").find("video");
+        }
+
+        if ($video.length && $video.attr("autoplay") !== undefined) {
+            $video[0].pause();
+        }
+    });
+
     $(".video-play-button").on("click", function (e) {
         e.preventDefault();
         var $this = $(this);
-        var $video = $this.siblings("video") || $this.sublings(".object-fit").find("video");
+
+        var $video = $this.siblings("video");
+        if (!$video.length) {
+            $video = $this.siblings(".object-fit").find("video");
+        }
+
+        console.log($video);
 
         if ($video.length) {
             if ($video[0].paused) {

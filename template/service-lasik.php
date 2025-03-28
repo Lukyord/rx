@@ -367,7 +367,7 @@
                 <div class="content">
                     <div class="accordion-wrapper">
                         <h5 class="c-light-green">เทคโนโลยีการรักษา</h5>
-                        <div class="accordion-container toggle trigger-first">
+                        <div class="accordion-container toggle trigger-first no-animate">
                             <?php
                             $accordion_arr = [
                                 [
@@ -614,7 +614,7 @@
                         <strong class="animate fadeIn">
                             คำถามที่พบบ่อย
                         </strong>
-                        <div class="accordion-container toggle trigger-first">
+                        <div class="accordion-container toggle trigger-first no-animate">
                             <?php
                             $accordion_arr = [
                                 [

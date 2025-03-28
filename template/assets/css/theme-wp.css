@@ -41,6 +41,7 @@
     font-size: inherit !important;
     line-height: inherit !important;
     color: inherit !important;
+    text-align: center !important;
 }
 .cky-notice .cky-title {
     margin: 0 !important;
@@ -75,7 +76,8 @@
     outline: 0 !important;
     padding: 0 !important;
     font-size: inherit !important;
-    text-decoration: none !important;
+    text-decoration: underline !important;
+    text-underline-offset: 0.3rem !important;
     white-space: nowrap !important;
     cursor: pointer !important;
     color: inherit !important;
@@ -150,10 +152,31 @@
     color: var(--color-theme-couple) !important;
     background: var(--color-theme) !important;
     border: var(--border-width) solid var(--color-theme) !important;
-    border-radius: 50vw !important;
+    border-radius: 0 !important;
     opacity: 1 !important;
     overflow: hidden !important;
+    position: relative;
 }
+
+.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-accept, .cky-btn-reject)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: 0;
+    left: 0;
+    background: var(--button-bg);
+    transform: scaleX(0);
+    transition: var(--duration) var(--timing-function);
+    z-index: -1;
+    transform-origin: left;
+}
+
+html.no-touchevents .cky-notice-btn-wrapper .cky-btn:is(.cky-btn-accept, .cky-btn-reject):hover::before {
+    transform: scaleX(1);
+}
+
 .cky-notice-btn-wrapper .cky-btn:is(.cky-btn-accept, .cky-btn-reject) > *:is(.text, .icon) {
     transition: var(--duration) var(--timing-function);
     transition-property: opacity, transform;
@@ -171,14 +194,9 @@
 }
 .cky-notice-btn-wrapper .cky-btn:is(.cky-btn-reject):not(:hover) {
     color: var(--color-theme) !important;
-    background: transparent !important;
-    border-color: var(--border-color) !important;
 }
-.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-reject):not(:hover) > .text {
-    transform: translateX(calc((var(--icon-width) + var(--gap-x)) / 2));
-}
-.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-reject):not(:hover) > .icon {
-    opacity: 0;
+.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-accept):hover {
+    color: var(--color-theme) !important;
 }
 
 .cky-notice-btn-wrapper .cky-btn-customize {
@@ -189,12 +207,16 @@
     width: -moz-fit-content !important;
     width: fit-content !important;
     max-width: 100% !important;
+    color: var(--color-black) !important;
 }
-.cky-notice-btn-wrapper .cky-btn-reject {
-    order: 0;
-}
-.cky-notice-btn-wrapper .cky-btn-accept {
+.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-reject) {
     order: 1;
+    --button-bg: var(--color-theme);
+    background: var(--color-white) !important;
+}
+.cky-notice-btn-wrapper .cky-btn:is(.cky-btn-accept) {
+    order: 0;
+    --button-bg: var(--color-white);
 }
 
 @media (min-width: 576px) {

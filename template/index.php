@@ -180,11 +180,11 @@
                 </div>
 
                 <ul class="service-list">
-                    <li><a class="underline-hover animate fadeIn" href="<?= $root ?>service-rexcuer.php">Rexcuer (Ambulance)</a></li>
-                    <li><a class="underline-hover animate fadeIn" href="<?= $root ?>service-manufacturing">ผลิตยา</a></li>
-                    <li><a class="underline-hover animate fadeIn" href="<?= $root ?>products.php">จำหน่ายเครื่องมือแพทย์</a></li>
-                    <li><a class="underline-hover animate fadeIn" href="<?= $root ?>products.php">จำหน่ายยา</a></li>
-                    <li><a class="underline-hover animate fadeIn" href="<?= $root ?>service-lasik.php">ศูนย์เลสิค</a></li>
+                    <li class="animate fadeIn"><a class="underline-hover" href="<?= $root ?>service-rexcuer.php">Rexcuer (Ambulance)</a></li>
+                    <li class="animate fadeIn"><a class="underline-hover" href="<?= $root ?>service-manufacturing">ผลิตยา</a></li>
+                    <li class="animate fadeIn"><a class="underline-hover" href="<?= $root ?>products.php">จำหน่ายเครื่องมือแพทย์</a></li>
+                    <li class="animate fadeIn"><a class="underline-hover" href="<?= $root ?>products.php">จำหน่ายยา</a></li>
+                    <li class="animate fadeIn"><a class="underline-hover" href="<?= $root ?>service-lasik.php">ศูนย์เลสิค</a></li>
                 </ul>
 
                 <div class="swipe-notice hidden-device-sm animate fadeIn">
