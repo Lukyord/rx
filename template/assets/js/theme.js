@@ -1203,7 +1203,7 @@ jQuery(document).ready(function ($) {
                 allowTouchMove: noTouchMove ? false : true,
                 watchSlidesVisibility: true,
                 breakpoints: {
-                    768: {
+                    721: {
                         centeredSlides: $this.hasClass("centered"),
                         slidesPerGroup: slidesPerGroup || 1,
                     },
@@ -1545,6 +1545,9 @@ jQuery(document).ready(function ($) {});
 jQuery(document).ready(function ($) {
     $("[data-section='index-hero-banner'] .swiper").each(function () {
         var $this = $(this);
+
+        if (isSmallScreen) return;
+
         $this
             .on("mouseover", function () {
                 $this.addClass("hovering");
@@ -1659,17 +1662,26 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
     $(".career-form").each(function () {
         const submitButton = $(this).find(".button[type='submit']");
+        const submitWrapper = $(".submit-button-wrapper");
 
-        $(window).on("scroll resiz load", function () {
+        function updateSubmitButtonState() {
             checkIfFullyInView(
-                $(".submit-button-wrapper"),
+                submitWrapper,
                 () => {
+                    console.log("static");
                     submitButton.addClass("static");
                 },
                 () => {
+                    console.log("not static");
                     submitButton.removeClass("static");
                 }
             );
+        }
+
+        $(window).on("scroll resize load", function () {
+            requestAnimationFrame(updateSubmitButtonState);
         });
+
+        updateSubmitButtonState();
     });
 });

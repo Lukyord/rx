@@ -91,7 +91,7 @@
                             } ?>
                         </div>
 
-                        <a href="javascript" class="button loadmore">
+                        <a href="javascript:;" class="button loadmore">
                             ดูเพิ่มเติ่ม
                         </a>
                     </div>
@@ -102,3 +102,11 @@
 </main>
 
 <?php include($root . "footer.php"); ?>
+
+<script>
+    document.querySelector('.loadmore').addEventListener('click', function() {
+        const cardContainer = document.querySelector('.card-container');
+        const originalCards = cardContainer.innerHTML;
+        cardContainer.insertAdjacentHTML('beforeend', originalCards);
+    });
+</script>

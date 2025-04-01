@@ -28,7 +28,7 @@
                                             "mb" => "./assets/media/design/lasik-slide-1.jpg"
                                         ],
                                         "date" => "12.01.2024",
-                                        "ttl" => "SMILE with your eyes, Rely on Praram 9",
+                                        "ttl" => $i . " SMILE with your eyes, Rely on Praram 9",
                                     ];
                                 ?>
                                     <div class="swiper-slide">

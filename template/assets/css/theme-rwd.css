@@ -94,6 +94,56 @@
         --column: 3;
     }
 
+    html.no-touchevents
+        [data-section="index-hero-banner"]
+        .swiper.hovering:has(.swiper-pagination:not(:hover))
+        .swiper-slide.swiper-slide-visible {
+        width: 25% !important;
+    }
+
+    html.no-touchevents
+        [data-section="index-hero-banner"]
+        .swiper.hovering:has(.swiper-pagination:not(:hover))
+        .swiper-slide:hover {
+        width: 50% !important;
+    }
+
+    html.no-touchevents
+        [data-section="index-hero-banner"]
+        .swiper-slide:hover
+        [data-card="index-banner-slide"]
+        .card-ttl {
+        scale: 1.25;
+    }
+
+    [data-card="index-banner-slide"] .card-desc {
+        top: calc(100% + var(--spacing-sm));
+        opacity: 0;
+    }
+
+    html.no-touchevents
+        [data-section="index-hero-banner"]
+        .swiper-slide:hover
+        [data-card="index-banner-slide"]
+        .card-desc {
+        top: 100%;
+        opacity: 1;
+    }
+
+    [data-card="index-banner-slide"] .card-link {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    html.no-touchevents
+        [data-section="index-hero-banner"]
+        .swiper-slide:hover
+        [data-card="index-banner-slide"]
+        .card-link {
+        opacity: 1;
+        transform: translateY(50%);
+    }
+
     /* PAGE: News */
     /* News Feed */
     [data-section="news-feed"] .tab-content .card-container [data-card="news"]:first-child {
@@ -377,6 +427,11 @@
         grid-gap: var(--spacing-sm);
     }
 
+    .footer-body .footer-content .block:nth-child(3) ul {
+        margin-left: unset;
+        padding-right: unset;
+    }
+
     .footer-body .footer-content .block {
         width: 100% !important;
     }
@@ -570,7 +625,7 @@
 
     .content-block-template:nth-child(odd) .slide-container .swiper,
     .content-block-template:nth-child(even) .content-container .content {
-        width: 100%;
+        width: 100% !important;
     }
 
     .content-block-template .content .content-desc {
@@ -600,16 +655,27 @@
 
     [data-card="index-banner-slide"] .card-ttl {
         padding-bottom: 0;
+        transform: none !important;
     }
 
     [data-card="index-banner-slide"] .card-desc {
-        position: static;
-        opacity: 1;
+        position: static !important;
+        opacity: 1 !important;
+        top: unset !important;
+        left: unset !important;
+        transition: none !important;
+        visibility: visible !important;
+    }
+
+    [data-card="index-banner-slide"] .card-desc > * {
+        transition: none !important;
     }
 
     [data-card="index-banner-slide"] .card-link {
-        opacity: 1;
-        transform: unset;
+        opacity: 1 !important;
+        transform: unset !important;
+        transition: none !important;
+        visibility: visible !important;
     }
 
     /* Bento Info */
@@ -850,6 +916,11 @@
         grid-gap: var(--spacing-5xs);
         z-index: 2;
         position: relative;
+    }
+
+    /* Image Banner */
+    [data-section="image-banner"] .image-content {
+        padding: var(--spacing-xs);
     }
 
     /* Review */
