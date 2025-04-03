@@ -161,7 +161,7 @@
                     $section_cover_m = "";
                     ?>
                     <figure class="object-fit">
-                        <video playsinline muted loop src="" class="vdojs" data-vdo-src="<?php echo $section_cover; ?>" data-vdo-srcset="<?php echo $section_cover_m; ?>"></video>
+                        <video playsinline muted loop src="" class="vdojs" data-vdo-src="<?php echo $section_cover; ?>" data-vdo-srcset="<?php echo $section_cover_m; ?>" poster="./assets/media/design/rexcuer-info-2.jpg"></video>
                         <a href="javascript:;" class="video-play-button"></a>
                     </figure>
                 </div>

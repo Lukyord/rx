@@ -35,7 +35,7 @@
                     ?>
                         <div class="cover">
                             <figure class="object-fit">
-                                <video playsinline muted loop src="" class="vdojs" data-vdo-src="<?php echo $section_cover; ?>" data-vdo-srcset="<?php echo $section_cover_m; ?>"></video>
+                                <video playsinline muted loop src="" class="vdojs" data-vdo-src="<?php echo $section_cover; ?>" data-vdo-srcset="<?php echo $section_cover_m; ?>" poster="<?= $hero["cover-video"]["poster"] ?>"></video>
                                 <a href="javascript:;" class="video-play-button"></a>
                             </figure>
                         </div>

@@ -10,7 +10,8 @@
         "banner-class" => "banner-with-video",
         "cover-video" => [
             "pc" => "./assets/media/design/csr-1-video.mp4",
-            "mb" => ""
+            "mb" => "",
+            "poster" => "./assets/media/design/csr-1-info-1.jpg"
         ],
     ];
 
