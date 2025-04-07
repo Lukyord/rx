@@ -7,15 +7,87 @@
     $hero = [
         "subttl" => "โครงการเพื่อความยั่งยืน",
         "ttl" => "โครงการแผงยาช่วยโลก",
-        "banner-class" => "banner-with-video",
-        "cover-video" => [
-            "pc" => "./assets/media/design/csr-1-video.mp4",
-            "mb" => "",
-            "poster" => "./assets/media/design/csr-1-info-1.jpg"
+        // "banner-class" => "banner-with-video",
+        // "cover-video" => [
+        //     "pc" => "./assets/media/design/csr-1-video.mp4",
+        //     "mb" => "",
+        //     "poster" => "./assets/media/design/csr-1-info-1.jpg"
+        // ],
+        "banner-class" => "banner-with-content margin-bottom",
+        "cover" => [
+            "pc" => "./assets/media/design/csr-2-hero.mp4",
+            "mb" => ""
         ],
+        "banner-content" => [
+            "ttl" => "โครงการพลังงานทดแทน",
+            "desc" => "สำหรับในส่วนของโรงงานผลิตของบริษัทอาร์เอ็กซ์ แมนูแฟคเจอริ่ง โรงงานผลิตยาในเครือ R.X. Group นอกจากโรงงานจะบำบัดน้ำเสียแล้ว ยังมีความพยายามรักษาสิ่งแวดล้อมมาอย่างยาวนานนับตั้งแต่ปี 2562 โดยได้ติดตั้งโซลาร์เซลล์ซึ่งปัจจุบันสามารถลดการปล่อยก๊าซเรือนกระจกได้มากถึง",
+            "icon-countup" => [
+                [
+                    "icon" => "solar_power",
+                    "subttl-1" => "โซลาร์เซลล์ซึ่งปัจจุบันสามารถลดการปล่อยก๊าซเรือนกระจกได้มากถึง",
+                    "start-number" => 1000000,
+                    "stop-number" => "1,344,421",
+                    "count-duration" => 3000,
+                    "unit" => "กิโลกรัมต่อปี",
+                    "subttl-2" => "หรือเทียบเท่ากับการปลูกต้นไม้ 40,126 ต้น",
+                ],
+            ]
+        ]
     ];
 
     include($root . "include/sc-hero-template.php");
+    ?>
+
+    <section data-section="video-banner">
+        <div class="sc-inner sc-inner--bottom-0 sc-inner--top-0">
+            <div class="container xl">
+                <div class="video-container animate fadeIn">
+                    <?php
+                    $section_cover = "./assets/media/design/csr-1-video.mp4";
+                    $section_cover_m = "";
+                    ?>
+                    <figure class="object-fit">
+                        <video playsinline muted loop src="" class="vdojs" data-vdo-src="<?php echo $section_cover; ?>" data-vdo-srcset="<?php echo $section_cover_m; ?>" poster="./assets/media/design/csr-1-info-1.jpg"></video>
+                        <a href="javascript:;" class="video-play-button"></a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php
+    $section = [
+        "ttl" => "เพราะเราเชื่อว่า “โอกาส”เป็นของทุกคน",
+        "sc-inner-extra-class" => "sc-inner--precedes",
+        "card" => [
+            [
+                "cover" => [
+                    "pc" => "./assets/media/design/csr-4-slide.jpg",
+                    "mb" => "./assets/media/design/csr-4-slide.jpg"
+                ],
+                "ttl" => "10%",
+                "subttl" => "ของจำนวนที่พบมีความเป็นอัจฉริยะในบางด้าน เช่น การวาดภาพหรือเล่นดนตรี"
+            ],
+            [
+                "cover" => [
+                    "pc" => "./assets/media/design/csr-4-slide.jpg",
+                    "mb" => "./assets/media/design/csr-4-slide.jpg"
+                ],
+                "ttl" => "20%",
+                "subttl" => "มีไอคิวต่ำที่ระดับน้อยถึงปานกลาง และอาจมีปัญหาพฤติกรMMรมร่วมด้วย แต่สามารถเรียนร่วมและฝึกอาชีพได้"
+            ],
+            [
+                "cover" => [
+                    "pc" => "./assets/media/design/csr-4-slide.jpg",
+                    "mb" => "./assets/media/design/csr-4-slide.jpg"
+                ],
+                "ttl" => "70%",
+                "subttl" => "ที่เหลือ ต้องได้รับการดูแลอย่างต่อเนื่อง โดยการบำบัดรักษาที่ต้องผสมผสาน ทั้งด้านการส่งเสริมพัฒนาการ การจัดรูปแบบการศึกษาที่เหมาะสม การส่งเสริมอาชีพ การมีงานทำ-การอยู่ร่วมกันในสังคมของเด็กออทิสติก"
+            ]
+        ]
+    ];
+
+    include($root . "include/sc-general-card-info.php");
     ?>
 
     <section data-section="csr-info">
