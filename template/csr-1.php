@@ -91,7 +91,7 @@
     ?>
 
     <section data-section="csr-info">
-        <div class="sc-inner sc-inner--precedes">
+        <div class="sc-inner sc-inner--follows">
             <div class="container xl">
                 <?php
                 $content_arr = [
