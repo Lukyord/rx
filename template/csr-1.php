@@ -23,7 +23,8 @@
             "desc" => "สำหรับในส่วนของโรงงานผลิตของบริษัทอาร์เอ็กซ์ แมนูแฟคเจอริ่ง โรงงานผลิตยาในเครือ R.X. Group นอกจากโรงงานจะบำบัดน้ำเสียแล้ว ยังมีความพยายามรักษาสิ่งแวดล้อมมาอย่างยาวนานนับตั้งแต่ปี 2562 โดยได้ติดตั้งโซลาร์เซลล์ซึ่งปัจจุบันสามารถลดการปล่อยก๊าซเรือนกระจกได้มากถึง",
             "icon-countup" => [
                 [
-                    "icon" => "solar_power",
+                    // "icon" => "solar_power",
+                    "icon" => "./assets/media/design/icon-svg-test.svg",
                     "subttl-1" => "โซลาร์เซลล์ซึ่งปัจจุบันสามารถลดการปล่อยก๊าซเรือนกระจกได้มากถึง",
                     "start-number" => 1000000,
                     "stop-number" => "1,344,421",
@@ -198,7 +199,8 @@
                     <?php
                     $banner_items_arr = [
                         [
-                            "icon" => "pill",
+                            // "icon" => "pill",
+                            "icon" => "./assets/media/design/icon-svg-test.svg",
                             "subttl-1" => "อะลูมิเนียมฟอยล์ดังกล่าวใช้เวลาในการย่อยสลายตามธรรมชาติประมาณ",
                             "start-number" => "0",
                             "stop-number" => "100",
@@ -206,7 +208,8 @@
                             "unit" => "ปี",
                         ],
                         [
-                            "icon" => "distance",
+                            // "icon" => "distance",
+                            "icon" => "./assets/media/design/icon-svg-test.svg",
                             "subttl-1" => "จุดรับขยะแผงฟอยล์ ทั่วประเทศมากกว่า",
                             "start-number" => "0",
                             "stop-number" => "150",
@@ -214,7 +217,8 @@
                             "unit" => "จุด",
                         ],
                         [
-                            "icon" => "dashboard",
+                            // "icon" => "dashboard",
+                            "icon" => "./assets/media/design/icon-svg-test.svg",
                             "subttl-1" => "สร้างอิฐบล็อกสำหรับนำมาเป็นทางเดินและที่จอดรถผู้พิการ โรงพยาบาลดอยหล่อ",
                             "start-number" => "0",
                             "stop-number" => "5,000",

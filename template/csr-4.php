@@ -15,7 +15,8 @@
         "banner-content" => [
             "icon-countup" => [
                 [
-                    "icon" => "diversity",
+                    // "icon" => "diversity",
+                    "icon" => "./assets/media/design/icon-svg-test.svg",
                     "subttl-1" => "ปัจจุบันประเทศไทยมีผู้เป็นออทิสติกกว่า",
                     "start-number" => "100,000",
                     "stop-number" => "300,000",

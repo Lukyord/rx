@@ -1,6 +1,7 @@
     <div class="banner-item-countup">
         <div class="icon">
-            <i class="ic ic-<?= $item["icon"] ?>"></i>
+            <!-- <i class="ic ic-<?= $item["icon"] ?>"></i> -->
+            <img src="<?= $item["icon"] ?>" alt="">
         </div>
         <div class="text">
             <!-- Subtitle 1 -->

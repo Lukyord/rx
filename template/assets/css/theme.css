@@ -3544,6 +3544,15 @@ ul.caution-list > li::before {
     font-size: var(--icon-size-2xl);
 }
 
+.banner-item-countup .icon img {
+    width: 66%;
+    height: auto;
+    aspect-ratio: 1;
+    filter: var(--filter-white);
+    object-fit: contain;
+    object-position: center;
+}
+
 .banner-item-countup .text {
     display: flex;
     flex-direction: column;
