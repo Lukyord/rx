@@ -85,7 +85,8 @@
         </div>
     </section>
 
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"></script>
+    <!-- <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> -->
     <section data-section="about-timeline">
         <div class="sc-inner">
             <div class="container xl">
@@ -98,55 +99,64 @@
                             "year" => "1975",
                             "text" => "จดทะเบียน หจก. อาร์เอ็กซ์ ฟามาซูติคัล",
                             "desc" => "Company's registration of RX Pharmaceutical",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/9e207a95-2a0f-447a-9e67-98b08f581902/McZAioqtpv.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-1.lottie'
+                            // "lotte" => 'https://lottie.host/9e207a95-2a0f-447a-9e67-98b08f581902/McZAioqtpv.lottie'
                         ],
                         [
                             "year" => "1976",
                             "text" => "จดทะเบียน บริษัท อาร์เอ็กซ์ จำกัด",
                             "desc" => "Company's registration of RX Company",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/ca8e1e7d-0f9e-4aa9-95d9-df3a27468209/jBa2cyFHdf.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-2.lottie'
+                            // "lotte" => 'https://lottie.host/ca8e1e7d-0f9e-4aa9-95d9-df3a27468209/jBa2cyFHdf.lottie'
                         ],
                         [
                             "year" => "1984",
                             "text" => "จัดจำหน่ายยา Air-X",
                             "desc" => "Start selling Air-X medicine ",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/6998398f-477d-4a3f-a9b4-f063ffde2de8/uehOVpK2DU.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-3.lottie'
+                            // "lotte" => 'https://lottie.host/6998398f-477d-4a3f-a9b4-f063ffde2de8/uehOVpK2DU.lottie'
                         ],
                         [
                             "year" => "2003",
                             "text" => "ก่อตั้ง บริษัท อาร์เอ็กซ์ แมนูแฟคเจอริ่ง จำกัดและเริ่มธุรกิจให้บริการศูนย์เลสิก (รพ.ยันฮี)",
                             "desc" => "RX Manufacturing was founded and start Lasik center (Yanhee Hospital)",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/de09c07e-9044-471a-b27b-9d16b0da8d61/D0DKLgUTUW.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-4.lottie'
+                            // "lotte" => 'https://lottie.host/de09c07e-9044-471a-b27b-9d16b0da8d61/D0DKLgUTUW.lottie'
                         ],
                         [
                             "year" => "2013",
                             "text" => "เปิดโกดังเก็บสินค้าใหม่ขนาดพื้นที่ 2,000 Pallets",
                             "desc" => "New warehouse",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/5708b4a3-55a3-4e06-a4bc-4f913c834806/WOVvBOGz6t.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-5.lottie'
+                            // "lotte" => 'https://lottie.host/5708b4a3-55a3-4e06-a4bc-4f913c834806/WOVvBOGz6t.lottie'
                         ],
                         [
                             "year" => "2019",
                             "text" => "เปิดและเริ่มดำเนินธุรกิจโรงประกอบรถพยาบาล REXCUER",
                             "desc" => "Start Rexcuer ambulance service",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/0713dcba-d7f4-4c20-908b-55730bb3c64d/PhBKmtC9A4.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-6.lottie'
+                            // "lotte" => 'https://lottie.host/0713dcba-d7f4-4c20-908b-55730bb3c64d/PhBKmtC9A4.lottie'
                         ],
                         [
                             "year" => "2020",
                             "text" => "เริ่มผลิตและจัดจำหน่ายยา ONE GERD",
                             "desc" => "Start manufaturing and selling ONE GERD",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/0a95b928-2d94-40fb-8f04-9fc5be98bba3/9I2kEhow8D.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-7.lottie'
+                            // "lotte" => 'https://lottie.host/0a95b928-2d94-40fb-8f04-9fc5be98bba3/9I2kEhow8D.lottie'
                         ],
                         [
                             "year" => "2022",
                             "text" => "เปิดให้บริการศูนย์เลสิกแห่งที่ 6 (รพ.ธรรมศาสตร์)",
                             "desc" => "Open the 6th lasik center at Thammasart Hospital",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/55dc6bad-8d7c-48fe-a57f-c61a6b7247c9/OYfVVNjpFc.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-8.lottie'
+                            // "lotte" => 'https://lottie.host/55dc6bad-8d7c-48fe-a57f-c61a6b7247c9/OYfVVNjpFc.lottie'
                         ],
                         [
                             "year" => "2025",
                             "text" => "ครบรอบ 50 ปี บริษัท อาร์เอ็กซ์ จำกัด",
                             "desc" => "50th year annivesary of RX Pharmaceutical ",
-                            "lotte" => '<dotlottie-player src="https://lottie.host/890facdf-82ab-4e8c-9e08-e8defbc2efeb/RXOhbw6ZCu.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>'
+                            "lotte" => './assets/media/lottie-9.lottie'
+                            // "lotte" => 'https://lottie.host/890facdf-82ab-4e8c-9e08-e8defbc2efeb/RXOhbw6ZCu.lottie'
                         ]
                     ];
 
@@ -184,3 +194,30 @@
 </main>
 
 <?php include($root . "footer.php"); ?>
+
+<!-- <script type="module">
+    import {
+        DotLottie
+    } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+    const loadLottieAnimations = () => {
+        document.querySelectorAll('.lottie-canvas').forEach(canvas => {
+            if (!canvas.hasAttribute('data-loaded')) {
+                new DotLottie({
+                    canvas: canvas,
+                    src: canvas.dataset.src,
+                    autoplay: true,
+                    loop: true
+                });
+                canvas.setAttribute('data-loaded', 'true');
+            }
+        });
+    };
+
+    // Load animations when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadLottieAnimations);
+    } else {
+        loadLottieAnimations();
+    }
+</script> -->

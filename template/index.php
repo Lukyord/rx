@@ -247,7 +247,7 @@
     </section>
 
     <section data-section="featured-product">
-        <div class="sc-inner sc-inner--follows">
+        <div class="sc-inner sc-inner--follows sc-inner--precedes">
             <div class="container xl">
                 <div class="sc-header justify-between">
                     <div class="sc-ttl animate fadeIn">
@@ -278,7 +278,7 @@
     </section>
 
     <section data-section="featured-news">
-        <div class="sc-inner sc-inner--follows sc-inner--precedes">
+        <div class="sc-inner sc-inner--follows sc-inner--bottom-0">
             <div class="container xl">
                 <div class="sc-header justify-between">
                     <div class="sc-ttl animate fadeIn">
